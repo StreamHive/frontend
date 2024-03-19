@@ -1,0 +1,8 @@
+<!-- <div *ngFor="let song of songs">
+    <p>{{song}}</p>
+</div> -->
+
+@for (song of songs; track song) {
+    <p>{{ song }}</p>
+    <video controls src="{{ videosService.rootUrl }}/videos/{{song}}?{{ videosService.currentSas }}"></video>
+}
