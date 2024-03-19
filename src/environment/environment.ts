@@ -6,7 +6,7 @@ export const environment: IEnvironment = {
 
     videoRootUrl: "http://localhost:3000",
 
-    videoApiUrl: "",
+    videoApiUrl: "http://localhost:3000",
 
     currentSas: "",
     

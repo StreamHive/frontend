@@ -1,5 +1,11 @@
-<button mat-raised-button *ngIf="!loginDisplay" (click)="login()">Login</button>
-<button mat-raised-button *ngIf="loginDisplay" (click)="logout()">Logout</button>
-<p>{{ loginDisplay }}</p>
+
+<label for="username">Username</label>
+<input #username id="username">
+<label for="password">Password</label>
+<input #password id="password">
+
+<button mat-raised-button (click)="login(username.value, password.value)">Login</button>
+
+<p>{{ authenticationService.currentAccessToken }}</p>
 
 <app-videos></app-videos>
