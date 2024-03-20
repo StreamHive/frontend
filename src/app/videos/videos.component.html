@@ -4,5 +4,5 @@
 
 @for (song of songs; track song) {
     <p>{{ song }}</p>
-    <video controls src="{{ videosService.rootUrl }}/videos/{{song}}?{{ videosService.currentSas }}"></video>
+    <video controls src="{{ videosService.rootUrl }}/videos/{{song}}?{{ sasService.getSasFromCookie() }}"></video>
 }

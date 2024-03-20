@@ -12,6 +12,5 @@ export class VideosService {
 
     rootUrl = this.environmentService.values.videoRootUrl
     apiUrl = this.environmentService.values.videoApiUrl
-    currentSas = this.environmentService.values.currentSas
 
 }

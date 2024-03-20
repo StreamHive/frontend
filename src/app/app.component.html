@@ -6,6 +6,6 @@
 
 <button mat-raised-button (click)="login(username.value, password.value)">Login</button>
 
-<p>{{ authenticationService.currentAccessToken }}</p>
+<p>{{ authenticationService.getAccessToken() }}</p>
 
 <app-videos></app-videos>

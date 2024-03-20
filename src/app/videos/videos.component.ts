@@ -1,11 +1,7 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { VideosService } from './videos.service';
-
-import { IdTokenClaims, PromptValue } from '@azure/msal-common';
-import { AccountInfo, AuthenticationResult, EventMessage, EventType, InteractionStatus, InteractionType, PopupRequest, RedirectRequest, SsoSilentRequest } from '@azure/msal-browser';
-import { MsalService, MsalBroadcastService, MSAL_GUARD_CONFIG, MsalGuardConfiguration, MsalGuard } from '@azure/msal-angular';
-//import { b2cPolicies } from './auth-config';
+import { SasService } from '../sas.service';
 
 @Component({
     selector: 'app-videos',
@@ -13,11 +9,6 @@ import { MsalService, MsalBroadcastService, MSAL_GUARD_CONFIG, MsalGuardConfigur
     imports: [NgFor, CommonModule],
     templateUrl: './videos.component.html',
     styleUrl: './videos.component.scss',
-    providers: [
-        MsalService,
-        MsalGuard,
-        MsalBroadcastService,
-    ],
 })
 export class VideosComponent {
     songs = [
@@ -26,7 +17,9 @@ export class VideosComponent {
     ]
 
     constructor(
-        public videosService: VideosService
+        public videosService: VideosService,
+        public sasService: SasService,
     ) {}
 
+    
 }
